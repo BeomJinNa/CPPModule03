@@ -11,13 +11,13 @@ class ClapTrap
 		ClapTrap(const std::string name);
 		ClapTrap(const ClapTrap& source);
 		ClapTrap&		operator=(const ClapTrap& source);
-		~ClapTrap(void);
-		void			attack(const std::string& target);
+		virtual ~ClapTrap(void);
+		virtual void	attack(const std::string& target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		unsigned		GetDamage(void) const;
 		void			SetDamage(unsigned int amount);
-	private:
+	protected:
 		std::string		mName;
 		unsigned int	mHitPoints;
 		unsigned int	mEnergyPoints;
